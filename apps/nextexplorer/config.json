@@ -6,8 +6,7 @@
   "author": "vikramsoni2",
   "port": 3000,
   "categories": [
-    "utilities",
-    "file-management"
+    "utilities"
   ],
   "description": "A modern, self-hosted file explorer with secure access control, polished UX, and a Docker-friendly deployment story.",
   "tipi_version": 1,
