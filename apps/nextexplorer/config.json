@@ -1,0 +1,26 @@
+{
+  "name": "nextExplorer",
+  "id": "nextexplorer",
+  "available": true,
+  "short_desc": "Self-hosted file explorer with secure access control.",
+  "author": "vikramsoni2",
+  "port": 3000,
+  "categories": [
+    "utilities",
+    "file-management"
+  ],
+  "description": "A modern, self-hosted file explorer with secure access control, polished UX, and a Docker-friendly deployment story.",
+  "tipi_version": 1,
+  "version": "v2.0.2",
+  "source": "https://github.com/vikramsoni2/nextExplorer",
+  "website": "https://explorer.nxz.ai"
+  "exposable": true,
+  "supported_architectures": [
+    "arm64",
+    "amd64"
+  ],
+  "created_at": 1765846811667,
+  "updated_at": 1765846811667,
+  "dynamic_config": true,
+  "form_fields": []
+}

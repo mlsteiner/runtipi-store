@@ -1,0 +1,12 @@
+{
+  "schemaVersion": 2,
+  "$schema": "https://schemas.runtipi.io/dynamic-compose.json",
+  "services": [
+    {
+      "name": "nextexplorer",
+      "image": "nxzai/explorer:latest",
+      "isMain": true,
+      "internalPort": "3000"
+    }
+  ]
+}
