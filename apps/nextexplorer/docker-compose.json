@@ -4,21 +4,21 @@
   "services": [
     {
       "name": "nextexplorer",
-      "image": "nxzai/explorer:latest",
+      "image": "nxzai/explorer:2.0.2",
       "isMain": true,
       "internalPort": 3000
     }
   ],
   "volumes": [
     {
-      "hostPath": "${APP_DATA_DIR}/nextexplorer/config",
+      "hostPath": "${APP_DATA_DIR}/config",
       "containerPath": "/config",
       "readOnly": false,
       "shared": false,
       "private": false
     },
     {
-      "hostPath": "${APP_DATA_DIR}/nextexplorer/cache",
+      "hostPath": "${APP_DATA_DIR}/cache",
       "containerPath": "/cache",
       "readOnly": false,
       "shared": false,
