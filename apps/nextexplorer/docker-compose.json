@@ -18,5 +18,11 @@
       "hostPath": "${APP_DATA_DIR}/cache",
       "containerPath": "/cache"
     }
-  ]
+  ],
+  "healthCheck": {
+        "test": "curl --fail http://localhost || exit 1",
+        "retries": 3,
+        "interval": "30s",
+        "timeout": "10s"
+      } 
 }
