@@ -8,5 +8,14 @@
       "isMain": true,
       "internalPort": 3010
     }
+  ],
+  "volumes": [
+    {
+      "hostPath": "${APP_DATA_DIR}/nextexplorer/config",
+      "containerPath": "/config",
+      "readOnly": false,
+      "shared": false,
+      "private": false
+    }
   ]
 }
