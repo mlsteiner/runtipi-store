@@ -4,11 +4,11 @@
   "available": true,
   "short_desc": "Tiny Go server that prints os information and HTTP request to output.",
   "author": "traefik",
-  "port": 8382,
+  "port": 3010,
   "categories": [
     "utilities"
   ],
-  "description": "Tiny Go webserver that prints OS information and HTTP request to output.",
+  "description": "A modern, self-hosted file explorer with secure access control, polished UX, and a Docker-friendly deployment story.",
   "tipi_version": 1,
   "version": "2.0.2",
   "source": "https://github.com/vikramsoni2/nextExplorer",
