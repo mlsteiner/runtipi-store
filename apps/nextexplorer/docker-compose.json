@@ -6,7 +6,7 @@
       "name": "nextexplorer",
       "image": "nxzai/explorer:latest",
       "isMain": true,
-      "internalPort": "80"
+      "internalPort": "3010"
     }
   ]
 }
