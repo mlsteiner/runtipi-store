@@ -12,17 +12,11 @@
   "volumes": [
     {
       "hostPath": "${APP_DATA_DIR}/config",
-      "containerPath": "/config",
-      "readOnly": false,
-      "shared": false,
-      "private": false
+      "containerPath": "/config"
     },
     {
       "hostPath": "${APP_DATA_DIR}/cache",
-      "containerPath": "/cache",
-      "readOnly": false,
-      "shared": false,
-      "private": false
+      "containerPath": "/cache"
     }
   ]
 }
