@@ -4,7 +4,7 @@
   "available": true,
   "short_desc": "Self-hosted file explorer with secure access control.",
   "author": "vikramsoni2",
-  "port": 3010,
+  "port": 3000,
   "categories": [
     "utilities"
   ],
