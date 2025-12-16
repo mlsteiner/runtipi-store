@@ -6,13 +6,20 @@
       "name": "nextexplorer",
       "image": "nxzai/explorer:latest",
       "isMain": true,
-      "internalPort": 3010
+      "internalPort": 3000
     }
   ],
   "volumes": [
     {
       "hostPath": "${APP_DATA_DIR}/nextexplorer/config",
       "containerPath": "/config",
+      "readOnly": false,
+      "shared": false,
+      "private": false
+    },
+    {
+      "hostPath": "${APP_DATA_DIR}/nextexplorer/cache",
+      "containerPath": "/cache",
       "readOnly": false,
       "shared": false,
       "private": false
