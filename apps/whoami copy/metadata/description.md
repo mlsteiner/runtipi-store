@@ -12,4 +12,4 @@ nextExplorer is a modern, self-hosted file explorer crafted for teams, creative 
 * Configurable themes, dark/light modes, and accessible keyboard shortcuts deliver a consistent experience on every device.
 
 ## Screenshots
-!()[https://github.com/vikramsoni2/nextExplorer/blob/main/docs/images/3.png?raw=true]
+![](https://github.com/vikramsoni2/nextExplorer/blob/main/docs/images/3.png?raw=true)
