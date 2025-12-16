@@ -10,7 +10,7 @@
   ],
   "description": "Tiny Go webserver that prints OS information and HTTP request to output.",
   "tipi_version": 1,
-  "version": "v2.0.2",
+  "version": "2.0.2",
   "source": "https://github.com/traefik/whoami",
   "exposable": true,
   "supported_architectures": [
