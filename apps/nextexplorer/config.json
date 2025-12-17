@@ -9,8 +9,8 @@
     "utilities"
   ],
   "description": "A modern, self-hosted file explorer with secure access control, polished UX, and a Docker-friendly deployment story.",
-  "tipi_version": 1,
-  "version": "v2.0.2",
+  "tipi_version": 2,
+  "version": "v2.0.3",
   "source": "https://github.com/vikramsoni2/nextExplorer",
   "website": "https://explorer.nxz.ai",
   "exposable": true,
@@ -18,8 +18,8 @@
     "arm64",
     "amd64"
   ],
-  "created_at": 1765846811667,
-  "updated_at": 1765846811667,
+  "created_at": 1765945278699,
+  "updated_at": 1765945278699,
   "dynamic_config": true,
   "form_fields": []
 }
