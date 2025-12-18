@@ -17,13 +17,18 @@
       ],
   "volumes": [
     {
-      "hostPath": "/etc/localtime",
-      "containerPath": "/etc/localtime",
-      "readOnly": true
+        "hostPath": "/etc/localtime",
+        "containerPath": "/etc/localtime",
+        "readOnly": true,
+        "shared": false,
+        "private": false
     },
     {
-      "hostPath": "/var/lib/zerobyte",
-      "containerPath": "/var/lib/zerobyte"
+        "hostPath": "/var/lib/zerobyte",
+        "containerPath": "/var/lib/zerobyte",
+        "readOnly": false,
+        "shared": false,
+        "private": false
     }
   ],
   "healthCheck": {
