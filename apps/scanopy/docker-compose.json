@@ -1,0 +1,155 @@
+{
+  "schemaVersion": 2,
+  "services": [
+    {
+      "name": "scanopy-daemon",
+      "image": "ghcr.io/scanopy/scanopy/daemon:latest",
+      "environment": [
+        {
+          "key": "SCANOPY_LOG_LEVEL",
+          "value": "${SCANOPY_LOG_LEVEL:-info}"
+        },
+        {
+          "key": "SCANOPY_SERVER_PORT",
+          "value": "${SCANOPY_SERVER_PORT:-60072}"
+        },
+        {
+          "key": "SCANOPY_DAEMON_PORT",
+          "value": "${SCANOPY_DAEMON_PORT:-60073}"
+        },
+        {
+          "key": "SCANOPY_SERVER_URL",
+          "value": "${SCANOPY_SERVER_URL:-http://127.0.0.1:60072}"
+        },
+        {
+          "key": "SCANOPY_PORT",
+          "value": "${SCANOPY_DAEMON_PORT:-60073}"
+        },
+        {
+          "key": "SCANOPY_BIND_ADDRESS",
+          "value": "${SCANOPY_BIND_ADDRESS:-0.0.0.0}"
+        },
+        {
+          "key": "SCANOPY_NAME",
+          "value": "${SCANOPY_NAME:-scanopy-daemon}"
+        },
+        {
+          "key": "SCANOPY_HEARTBEAT_INTERVAL",
+          "value": "${SCANOPY_HEARTBEAT_INTERVAL:-30}"
+        },
+        {
+          "key": "SCANOPY_MODE",
+          "value": "${SCANOPY_MODE:-Push}"
+        }
+      ],
+      "volumes": [
+        {
+          "hostPath": "daemon-config",
+          "containerPath": "/root/.config/daemon",
+          "readOnly": false,
+          "shared": false,
+          "private": false
+        },
+        {
+          "hostPath": "/var/run/docker.sock",
+          "containerPath": "/var/run/docker.sock",
+          "readOnly": true,
+          "shared": false,
+          "private": false
+        }
+      ],
+      "networkMode": "host",
+      "healthCheck": {
+        "test": "curl -f http://localhost:${SCANOPY_DAEMON_PORT:-60073}/api/health || exit 1",
+        "interval": "5s",
+        "timeout": "3s",
+        "retries": 15
+      },
+      "privileged": true
+    },
+    {
+      "name": "postgres",
+      "image": "postgres:17-alpine",
+      "environment": [
+        {
+          "key": "POSTGRES_DB",
+          "value": "scanopy"
+        },
+        {
+          "key": "POSTGRES_USER",
+          "value": "postgres"
+        },
+        {
+          "key": "POSTGRES_PASSWORD",
+          "value": "${POSTGRES_PASSWORD:-password}"
+        }
+      ],
+      "volumes": [
+        {
+          "hostPath": "postgres_data",
+          "containerPath": "/var/lib/postgresql/data",
+          "readOnly": false,
+          "shared": false,
+          "private": false
+        }
+      ],
+      "healthCheck": {
+        "test": "pg_isready -U postgres",
+        "interval": "10s",
+        "timeout": "5s",
+        "retries": 5
+      }
+    },
+    {
+      "name": "server",
+      "image": "ghcr.io/scanopy/scanopy/server:latest",
+      "environment": [
+        {
+          "key": "SCANOPY_LOG_LEVEL",
+          "value": "${SCANOPY_LOG_LEVEL:-info}"
+        },
+        {
+          "key": "SCANOPY_SERVER_PORT",
+          "value": "${SCANOPY_SERVER_PORT:-60072}"
+        },
+        {
+          "key": "SCANOPY_DAEMON_PORT",
+          "value": "${SCANOPY_DAEMON_PORT:-60073}"
+        },
+        {
+          "key": "SCANOPY_DATABASE_URL",
+          "value": "postgresql://postgres:${POSTGRES_PASSWORD:-password}@postgres:5432/scanopy"
+        },
+        {
+          "key": "SCANOPY_WEB_EXTERNAL_PATH",
+          "value": "/app/static"
+        },
+        {
+          "key": "SCANOPY_PUBLIC_URL",
+          "value": "${SCANOPY_PUBLIC_URL:-http://localhost:${SCANOPY_SERVER_PORT:-60072}}"
+        },
+        {
+          "key": "SCANOPY_INTEGRATED_DAEMON_URL",
+          "value": "http://172.17.0.1:${SCANOPY_DAEMON_PORT:-60073}"
+        }
+      ],
+      "volumes": [
+        {
+          "hostPath": "./data",
+          "containerPath": "/data",
+          "readOnly": false,
+          "shared": false,
+          "private": false
+        }
+      ],
+      "dependsOn": {
+        "postgres": {
+          "condition": "service_healthy"
+        },
+        "daemon": {
+          "condition": "service_healthy"
+        }
+      }
+    }
+  ]
+}

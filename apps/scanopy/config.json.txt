@@ -1,0 +1,26 @@
+{
+  "name": "Scanopy",
+  "id": "scanopy",
+  "available": true,
+  "short_desc": "Clean network diagrams. One-time setup, zero upkeep.",
+  "author": "scanopy",
+  "port": 60072,
+  "categories": [
+    "utilities",
+    "data"
+  ],
+  "description": "Scanopy scans your network, identifies hosts and services, and generates an interactive visualization showing how everything connects, letting you easily create and maintain network documentation.",
+  "tipi_version": 1,
+  "version": "v0.12.4",
+  "source": "https://github.com/scanopy/scanopy",
+  "website": "https://scanopy.net",
+  "exposable": true,
+  "supported_architectures": [
+    "arm64",
+    "amd64"
+  ],
+  "created_at": 1766007441088,
+  "updated_at": 1766272156000,
+  "dynamic_config": true,
+  "form_fields": []
+}
