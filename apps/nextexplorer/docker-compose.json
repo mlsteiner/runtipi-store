@@ -4,7 +4,7 @@
   "services": [
     {
       "name": "nextexplorer",
-      "image": "nxzai/explorer:v2.0.4",
+      "image": "nxzai/explorer:v2.0.5",
       "isMain": true,
       "internalPort": 3000
     }
