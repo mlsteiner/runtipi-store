@@ -10,8 +10,8 @@
     "data"
   ],
   "description": "Powerful backup automation for your remote storage Encrypt, compress, and protect your data with ease.",
-  "tipi_version": 5,
-  "version": "v0.20.0",
+  "tipi_version": 6,
+  "version": "v0.21.1",
   "source": "https://github.com/nicotsx/zerobyte",
   "website": "https://github.com/nicotsx/zerobyte",
   "exposable": true,
@@ -20,7 +20,7 @@
     "amd64"
   ],
   "created_at": 1766007441088,
-  "updated_at": 1766880153000,
+  "updated_at": 1767553558000,
   "dynamic_config": true,
   "form_fields": []
 }
