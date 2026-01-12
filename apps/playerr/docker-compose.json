@@ -7,14 +7,14 @@
       "internalPort": 2727,
       "volumes": [
         {
-          "hostPath": "./config",
+          "hostPath": "${APP_DATA_DIR}/data/config",
           "containerPath": "/app/config",
           "readOnly": false,
           "shared": false,
           "private": false
         },
         {
-          "hostPath": "/your/games/path",
+          "hostPath": "/mnt/BX500/media/games",
           "containerPath": "/media",
           "readOnly": false,
           "shared": false,
