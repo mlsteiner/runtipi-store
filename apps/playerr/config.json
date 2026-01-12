@@ -1,0 +1,26 @@
+{
+  "name": "Playerr",
+  "id": "playerr",
+  "available": true,
+  "short_desc": "Self-Hosted Game Library Manager & PVR.",
+  "author": "Maikboarder",
+  "port": 2727,
+  "categories": [
+    "gaming",
+    "data"
+  ],
+  "description": "Playerr is designed to be the definitive solution for video game enthusiasts who self-host their libraries. It bridges the gap between your local digital assets and the vast world of gaming metadata.",
+  "tipi_version": 1,
+  "version": "v0.3.12",
+  "source": "https://github.com/Maikboarder/Playerr",
+  "website": "https://github.com/Maikboarder/Playerr",
+  "exposable": true,
+  "supported_architectures": [
+    "arm64",
+    "amd64"
+  ],
+  "created_at": 1768259648000,
+  "updated_at": 1768259648000,
+  "dynamic_config": true,
+  "form_fields": []
+}

@@ -1,0 +1,26 @@
+{
+  "schemaVersion": 2,
+  "services": [
+    {
+      "name": "playerr",
+      "image": "maikboarder/playerr:0.3.12",
+      "internalPort": 2727,
+      "volumes": [
+        {
+          "hostPath": "./config",
+          "containerPath": "/app/config",
+          "readOnly": false,
+          "shared": false,
+          "private": false
+        },
+        {
+          "hostPath": "/your/games/path",
+          "containerPath": "/media",
+          "readOnly": false,
+          "shared": false,
+          "private": false
+        }
+      ]
+    }
+  ]
+}
