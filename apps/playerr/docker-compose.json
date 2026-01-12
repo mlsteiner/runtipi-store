@@ -3,7 +3,7 @@
   "services": [
     {
       "name": "playerr",
-      "image": "maikboarder/playerr:0.3.12",
+      "image": "maikboarder/playerr:latest",
       "internalPort": 2727,
       "volumes": [
         {
