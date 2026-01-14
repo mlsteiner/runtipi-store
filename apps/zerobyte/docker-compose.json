@@ -1,37 +1,45 @@
 {
-  "schemaVersion": 2,
   "$schema": "https://schemas.runtipi.io/v2/dynamic-compose.json",
+  "schemaVersion": 2,
   "services": [
     {
       "name": "zerobyte",
       "image": "ghcr.io/nicotsx/zerobyte:v0.22.0",
+      "internalPort": 4096,
       "isMain": true,
-      "internalPort": 4096
-    }
-  ],
-  "environment": [
+      "capAdd": ["SYS_ADMIN"],
+      "devices": ["/dev/fuse:/dev/fuse"],
+      "environment": [
         {
           "key": "TZ",
           "value": "${TZ}"
         }
       ],
-  "volumes": [
-    {
-        "hostPath": "/etc/localtime",
-        "containerPath": "/etc/localtime",
-        "readOnly": true,
-        "shared": false,
-        "private": false
-    },
-    {
-        "hostPath": "/var/lib/zerobyte",
-        "containerPath": "/var/lib/zerobyte",
-        "readOnly": false,
-        "shared": false,
-        "private": false
+      "volumes": [
+        {
+          "containerPath": "/var/lib/zerobyte",
+          "hostPath": "/var/lib/zerobyte",
+          "bind": {
+            "propagation": "rshared"
+          }
+        },
+        {
+          "containerPath": "/run/docker/plugins",
+          "hostPath": "/run/docker/plugins"
+        },
+        {
+          "containerPath": "/var/run/docker.sock",
+          "hostPath": "/var/run/docker.sock"
+        },
+        {
+          "containerPath": "/etc/localtime",
+          "hostPath": "/etc/localtime",
+          "readOnly": true
+        }
+      ]
     }
   ],
-  "healthCheck": {
+    "healthCheck": {
         "test": "curl --fail http://localhost || exit 1",
         "retries": 3,
         "interval": "30s",
