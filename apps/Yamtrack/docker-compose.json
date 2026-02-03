@@ -3,7 +3,7 @@
   "services": [
     {
       "name": "Yamtrack",
-      "image": "ghcr.io/fuzzygrim/yamtrack",
+      "image": "ghcr.io/fuzzygrim/yamtrack:v0.24.11",
       "environment": [
         {
           "key": "SECRET",
@@ -29,7 +29,7 @@
       "internalPort": 8000,
       "volumes": [
         {
-          "hostPath": "${APP_DATA_DIR}/data/db",
+          "hostPath": "${APP_DATA_DIR}/data/yamtrack/db",
           "containerPath": "/yamtrack/db",
           "readOnly": false,
           "shared": false,
@@ -55,7 +55,7 @@
       "image": "redis:7-alpine",
       "volumes": [
         {
-          "hostPath": "${APP_DATA_DIR}/data/redis",
+          "hostPath": "${APP_DATA_DIR}/data/yamtrack/redis",
           "containerPath": "/data",
           "readOnly": false,
           "shared": false,
