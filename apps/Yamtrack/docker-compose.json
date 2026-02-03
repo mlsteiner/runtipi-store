@@ -3,7 +3,7 @@
   "services": [
     {
       "name": "Yamtrack",
-      "image": "ghcr.io/fuzzygrim/yamtrack:latest",
+      "image": "ghcr.io/fuzzygrim/yamtrack",
       "environment": [
         {
           "key": "SECRET",
