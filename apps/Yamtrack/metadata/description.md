@@ -1,6 +1,6 @@
-#Yamtrack
+# Yamtrack
 
-##Features
+## Features
 
 - Track movies, tv shows, anime, manga, games, books, comics, and board games.
 - Track each season of a tv show individually and episodes watched.
