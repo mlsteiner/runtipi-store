@@ -1,0 +1,49 @@
+{
+  "schemaVersion": 2,
+  "services": [
+    {
+      "name": "yamtrack",
+      "image": "ghcr.io/fuzzygrim/yamtrack",
+      "environment": [
+        {
+          "key": "TZ",
+          "value": "$TZ"
+        },
+        {
+          "key": "SECRET",
+          "value": "1770133779000"
+        },
+        {
+          "key": "REDIS_URL",
+          "value": "redis://redis:6379"
+        }
+      ],
+      "internalPort": 8000,
+      "volumes": [
+        {
+          "hostPath": "./db",
+          "containerPath": "/yamtrack/db",
+          "readOnly": false,
+          "shared": false,
+          "private": false
+        }
+      ],
+      "dependsOn": [
+        "redis"
+      ]
+    },
+    {
+      "name": "yamtrack-redis",
+      "image": "redis:8-alpine",
+      "volumes": [
+        {
+          "hostPath": "redis_data",
+          "containerPath": "/data",
+          "readOnly": false,
+          "shared": false,
+          "private": false
+        }
+      ]
+    }
+  ]
+}
