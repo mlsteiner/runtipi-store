@@ -2,48 +2,69 @@
   "schemaVersion": 2,
   "services": [
     {
-      "name": "yamtrack",
-      "image": "ghcr.io/fuzzygrim/yamtrack",
+      "name": "Yamtrack",
+      "image": "ghcr.io/fuzzygrim/yamtrack:latest",
       "environment": [
         {
-          "key": "TZ",
-          "value": "$TZ"
-        },
-        {
           "key": "SECRET",
-          "value": "1770133779000"
+          "value": "XaMPejpassGRWWExOdGwgSGAHVqrgRcaOIFDgjIWyGzAgIDSGDYSecRxswUedaek"
         },
         {
           "key": "REDIS_URL",
           "value": "redis://redis:6379"
+        },
+        {
+          "key": "TMDB_NSFW",
+          "value": true
+        },
+        {
+          "key": "MAL_NSFW",
+          "value": true
+        },
+        {
+          "key": "TZ",
+          "value": "${TZ}"
         }
       ],
       "internalPort": 8000,
       "volumes": [
         {
-          "hostPath": "./db",
+          "hostPath": "${APP_DATA_DIR}/data/db",
           "containerPath": "/yamtrack/db",
           "readOnly": false,
           "shared": false,
           "private": false
         }
       ],
+      "healthCheck": {
+        "test": "nc -z 127.0.0.1 8000 || exit 1",
+        "interval": "10s",
+        "timeout": "5s",
+        "retries": 3,
+        "startPeriod": "90s"
+      },
+      "securityOpt": [
+        "no-new-privileges:true"
+      ],
       "dependsOn": [
         "redis"
       ]
     },
     {
-      "name": "yamtrack-redis",
-      "image": "redis:8-alpine",
+      "name": "Yamtrack-REDIS",
+      "image": "redis:7-alpine",
       "volumes": [
         {
-          "hostPath": "redis_data",
+          "hostPath": "${APP_DATA_DIR}/data/redis",
           "containerPath": "/data",
           "readOnly": false,
           "shared": false,
           "private": false
         }
-      ]
+      ],
+      "healthCheck": {
+        "test": "redis-cli ping || exit 1"
+      }
     }
   ]
 }
