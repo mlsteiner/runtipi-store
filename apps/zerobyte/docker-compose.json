@@ -12,7 +12,11 @@
       "environment": [
         {
           "key": "TZ",
-          "value": "${TZ}"
+          "value": "${TZ}",
+          "key": "APP_SECRET",
+          "value": "${APP_SECRET}",
+          "key": "BASE_URL",
+          "value": "${BASE_URL}"
         }
       ],
       "volumes": [
