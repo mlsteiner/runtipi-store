@@ -1,0 +1,13 @@
+services:
+    playerr:
+        image: maikboarder/playerr:v0.4.8
+        volumes:
+            - ${APP_DATA_DIR}/data/config:/app/config
+            - /mnt/BX500/media/games:/media
+        restart: unless-stopped
+        x-runtipi:
+          is_main: true
+          internal_port: 2727
+    
+x-runtipi:
+    schema_version: 2
