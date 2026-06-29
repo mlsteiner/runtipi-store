@@ -3,12 +3,16 @@
   "schemaVersion": 2,
   "services": [
     {
-      "image": "santiagosayshey/profilarr:v2.0.9",
+      "image": "ghcr.io/dictionarry-hub/profilarr:latest",
       "name": "profilarr",
       "isMain": true,
       "internalPort": 6868,
       "environment": [
         {
+          "key": "PUID",
+          "value": "1000",
+          "key": "PGID",
+          "value": "1000",
           "key": "TZ",
           "value": "${TZ}"
         }
