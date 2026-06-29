@@ -1,6 +1,6 @@
 services:
     nextexplorer:
-        image: nxzai/explorer:2.2.4
+        image: nxzai/explorer:v2.2.4
         volumes:
             - ${APP_DATA_DIR}/data/nextexplorer/config:/config
             - ${APP_DATA_DIR}/data/nextexplorer/cache:/cache
