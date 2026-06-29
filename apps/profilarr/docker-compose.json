@@ -3,7 +3,7 @@
   "schemaVersion": 2,
   "services": [
     {
-      "image": "ghcr.io/dictionarry-hub/profilarr:latest",
+      "image": "ghcr.io/dictionarry-hub/profilarr:2.0.9",
       "name": "profilarr",
       "isMain": true,
       "internalPort": 6868,
