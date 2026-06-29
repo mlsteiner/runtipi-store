@@ -4,7 +4,6 @@ services:
         volumes:
             - ${APP_DATA_DIR}/data/nextexplorer/config:/config
             - ${APP_DATA_DIR}/data/nextexplorer/cache:/cache
-            -
         environment:
             - PUID=1000
             - PGIUD=1000
