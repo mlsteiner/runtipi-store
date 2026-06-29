@@ -1,0 +1,17 @@
+services:
+    nextexplorer:
+        image: nxzai/explorer:2.2.4
+        volumes:
+            - ${APP_DATA_DIR}/data/nextexplorer/config:/config
+            - ${APP_DATA_DIR}/data/nextexplorer/cache:/cache
+            -
+        environment:
+            - PUID=1000
+            - PGIUD=1000
+            - TZ=${TZ}
+        x-runtipi:
+          is_main: true
+          internal_port: 3000
+    
+x-runtipi:
+    schema_version: 2
