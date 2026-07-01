@@ -1,6 +1,6 @@
 services:
     muxarr:
-        image: ghcr.io/kirovair/muxarr:v0.9.2
+        image: ghcr.io/kirovair/muxarr:latest
         container_name: muxarr
         environment:
           - TZ=${TZ}
@@ -9,8 +9,6 @@ services:
         volumes:
           - ${APP_DATA_DIR}/data:/data
           - /mnt/BX500/media:/media
-        ports:
-          - 8183:8183
         restart: unless-stopped
         x-runtipi:
           is_main: true
