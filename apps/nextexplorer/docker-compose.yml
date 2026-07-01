@@ -8,6 +8,7 @@ services:
             - PUID=1000
             - PGIUD=1000
             - TZ=${TZ}
+        restart: unless-stopped
         x-runtipi:
           is_main: true
           internal_port: 3000
