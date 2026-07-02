@@ -2,7 +2,7 @@
   "name": "Muxarr",
   "id": "muxarr",
   "available": true,
-  "short_desc": "Ever had your player pick the wrong audio language, or show 20 subtitle options you'll never use?",
+  "short_desc": "Quick and easy way to strip unwanted audio and subtitle tracks from your media files.",
   "author": "KirovAir",
   "port": 8183,
   "categories": [
