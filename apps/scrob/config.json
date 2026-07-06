@@ -1,0 +1,26 @@
+{
+  "name": "Scrob",
+  "id": "scrob",
+  "available": true,
+  "short_desc": "Open-source, self-hosted media tracking - your personal Letterboxd + Trakt.",
+  "author": "Miguel Ribeiro",
+  "port": 7330,
+  "categories": [
+    "media",
+    "utilities"
+  ],
+  "description": "Scrob syncs your libraries from Jellyfin, Plex, and Emby, tracks your watch history, ratings, and personal lists, and lets you push your activity back to your media server - all from a clean, app-like web interface that installs as a PWA on any device..",
+  "tipi_version": 1,
+  "version": "v1.37.0",
+  "source": "https://github.com/ellite/scrob",
+  "website": "https://scrob.app/",
+  "exposable": true,
+  "supported_architectures": [
+    "arm64",
+    "amd64"
+  ],
+  "created_at": 1782874339000,
+  "updated_at": 1782874349000,
+  "dynamic_config": true,
+  "form_fields": []
+}
