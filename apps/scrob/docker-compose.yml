@@ -30,7 +30,7 @@ services:
 
       # ── Security ────────────────────────────────────────────────────────────
       # Generate with: openssl rand -hex 32
-      SECRET_KEY: ${SCROB_SECRET_KEY}
+      SECRET_KEY: ${SCROB_APP_SECRET}
 
       # ── Registrations ────────────────────────────────────────────────────────
       # Registrations are open by default. Disable after initial setup if desired.
@@ -56,7 +56,7 @@ services:
       # Run the process as a specific user/group (defaults to 1000:1000)
       # PUID: "1000"
       # PGID: "1000"
-      TZ: UTC
+      TZ: ${TZ}
 
       # ── Advanced ─────────────────────────────────────────────────────────────
       # Override the internal backend port (only needed if 7331 conflicts on bare metal installations)
