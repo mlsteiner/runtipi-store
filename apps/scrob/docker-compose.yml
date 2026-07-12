@@ -30,7 +30,7 @@ services:
 
       # ── Security ────────────────────────────────────────────────────────────
       # Generate with: openssl rand -hex 32
-      SECRET_KEY: 4fb41cbf2489db516902d5ddb6a11093a7b9fe2ae721d0ad268032844e709d9e
+      SECRET_KEY: ${SCROB_SECRET_KEY}
 
       # ── Registrations ────────────────────────────────────────────────────────
       # Registrations are open by default. Disable after initial setup if desired.
