@@ -10,7 +10,7 @@
     "utilities"
   ],
   "description": "Scrob syncs your libraries from Jellyfin, Plex, and Emby, tracks your watch history, ratings, and personal lists, and lets you push your activity back to your media server - all from a clean, app-like web interface that installs as a PWA on any device..",
-  "tipi_version": 3,
+  "tipi_version": 4,
   "version": "v1.37.0",
   "source": "https://github.com/ellite/scrob",
   "website": "https://scrob.app/",
@@ -20,7 +20,7 @@
     "amd64"
   ],
   "created_at": 1782874339000,
-  "updated_at": 1783896076000,
+  "updated_at": 1784139418000,
   "dynamic_config": true,
   "form_fields": []
 }
