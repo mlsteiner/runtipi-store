@@ -8,7 +8,7 @@ services:
       POSTGRES_PASSWORD: 4fb41cbf2489db51690
       POSTGRES_DB: scrob
     volumes:
-      - db_data:/var/lib/postgresql/data
+      - ${APP_DATA_DIR}/data/db:/var/lib/postgresql/data
     healthcheck:
       test: ["CMD-SHELL", "pg_isready -U scrob -d scrob"]
       interval: 5s
@@ -17,7 +17,7 @@ services:
 
   scrob:
     container_name: scrob
-    image: bellamy/scrob:latest
+    image: bellamy/scrob:v1.41.1
     restart: unless-stopped
     depends_on:
       scrob-db:
@@ -30,7 +30,7 @@ services:
 
       # ── Security ────────────────────────────────────────────────────────────
       # Generate with: openssl rand -hex 32
-      SECRET_KEY: 4fb41cbf2489db516902d5ddb6a11093a7b9fe2ae721d0ad268032844e709d9e
+      SECRET_KEY: ${APP_SECRET_KEY}
 
       # ── Registrations ────────────────────────────────────────────────────────
       # Registrations are open by default. Disable after initial setup if desired.
@@ -62,7 +62,7 @@ services:
       # Override the internal backend port (only needed if 7331 conflicts on bare metal installations)
       # BACKEND_PORT: "7331"
     volumes:
-      - scrob_data:/app/backend/data
+      - ${APP_DATA_DIR}/data:/app/backend/data
 
 volumes:
   db_data:
