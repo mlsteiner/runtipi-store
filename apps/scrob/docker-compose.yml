@@ -4,9 +4,9 @@ services:
     image: postgres:16-alpine
     restart: unless-stopped
     environment:
-      POSTGRES_USER: scrob
-      POSTGRES_PASSWORD: 4fb41cbf2489db51690
-      POSTGRES_DB: scrob
+      POSTGRES_USER: ${SCROB_POSTGRES_USER}
+      POSTGRES_PASSWORD: ${SCROB_POSTGRES_PASS}
+      POSTGRES_DB: ${SCROB_DB_NAME}
     volumes:
       - ${APP_DATA_DIR}/data/db:/var/lib/postgresql/data
     healthcheck:
@@ -17,7 +17,7 @@ services:
 
   scrob:
     container_name: scrob
-    image: bellamy/scrob:latest
+    image: bellamy/scrob:1.41.1
     restart: unless-stopped
     depends_on:
       scrob-db:
@@ -26,11 +26,11 @@ services:
       - "7330:7330"
     environment:
       # ── Database ────────────────────────────────────────────────────────────
-      DATABASE_URL: postgresql+asyncpg://scrob:4fb41cbf2489db51690@scrob-db:5432/scrob
+      DATABASE_URL: postgresql+asyncpg://scrob:${SCROB_POSTGRES_PASS}@scrob-db:5432/scrob
 
       # ── Security ────────────────────────────────────────────────────────────
       # Generate with: openssl rand -hex 32
-      SECRET_KEY: ${APP_SECRET_KEY}
+      SECRET_KEY: ${SCROB_SECRET_KEY}
 
       # ── Registrations ────────────────────────────────────────────────────────
       # Registrations are open by default. Disable after initial setup if desired.
@@ -62,7 +62,7 @@ services:
       # Override the internal backend port (only needed if 7331 conflicts on bare metal installations)
       # BACKEND_PORT: "7331"
     volumes:
-      - ${APP_DATA_DIR}/data:/app/backend/data
+      - ${APP_DATA_DIR}/data/backend:/app/backend/data
 
 volumes:
   db_data:
