@@ -4,9 +4,9 @@ services:
     image: postgres:16-alpine
     restart: unless-stopped
     environment:
-      POSTGRES_USER: ${SCROB_POSTGRES_USER}
+      POSTGRES_USER: scrob
       POSTGRES_PASSWORD: ${SCROB_POSTGRES_PASS}
-      POSTGRES_DB: ${SCROB_DB_NAME}
+      POSTGRES_DB: scrob
     volumes:
       - ${APP_DATA_DIR}/data/db:/var/lib/postgresql/data
     healthcheck:

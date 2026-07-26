@@ -22,5 +22,22 @@
   "created_at": 1782874339000,
   "updated_at": 1785002372000,
   "dynamic_config": true,
-  "form_fields": []
+  "form_fields": [
+      {
+          "type": "password",
+          "label": "Password",
+          "max": 32,
+          "min": 8,
+          "required": true,
+          "env_variable": "SCROB_POSTGRES_PASS"
+      },
+      {
+          "type": "password",
+          "label": "Password",
+          "max": 32,
+          "min": 32,
+          "required": true,
+          "env_variable": "SCROB_SECRET_KEY"
+      }
+  ]
 }
