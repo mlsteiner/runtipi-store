@@ -25,7 +25,7 @@
   "form_fields": [
       {
           "type": "password",
-          "label": "Password",
+          "label": "Postgres Password",
           "max": 32,
           "min": 8,
           "required": true,
@@ -33,7 +33,7 @@
       },
       {
           "type": "password",
-          "label": "Password",
+          "label": "App Password",
           "max": 32,
           "min": 32,
           "required": true,
