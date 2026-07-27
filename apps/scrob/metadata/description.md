@@ -1,5 +1,5 @@
 <div align="center">
-  <img src="frontend/public/scrob.png" alt="Scrob Logo" width="120" />
+  <img src="https://github.com/ellite/scrob/blob/main/frontend/public/scrob.png" alt="Scrob Logo" width="120" />
   <h1>Scrob</h1>
   <p>Open-source, self-hosted media tracking - your personal Letterboxd + Trakt.</p>
 
