@@ -10,8 +10,8 @@
     "utilities"
   ],
   "description": "Muxarr cleans them up by removing unwanted audio and subtitle tracks and standardizing track metadata. It uses mkvmerge for MKV files and ffmpeg with stream copy for other containers, so tracks are remuxed rather than re-encoded and there is zero quality loss. A 4GB file takes about a minute instead of hours, even on low-end hardware like a NAS or Raspberry Pi.",
-  "tipi_version": 1,
-  "version": "v0.9.2",
+  "tipi_version": 2,
+  "version": "v0.9.5",
   "source": "https://github.com/KirovAir/muxarr",
   "website": "https://github.com/KirovAir/muxarr",
   "exposable": true,
@@ -20,7 +20,7 @@
     "amd64"
   ],
   "created_at": 1782874339000,
-  "updated_at": 1782874349000,
+  "updated_at": 1785190177000,
   "dynamic_config": true,
   "form_fields": []
 }
