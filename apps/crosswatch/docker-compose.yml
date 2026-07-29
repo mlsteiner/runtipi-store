@@ -1,0 +1,17 @@
+services:
+    crosswatch:
+        image: ghcr.io/cenodude/crosswatch:0.10.6
+        container_name: crosswatch
+        volumes:
+            - ${APP_DATA_DIR}/data/config:/config
+        environment:
+            - PUID=1000
+            - PGIUD=1000
+            - TZ=${TZ}
+        restart: unless-stopped
+        x-runtipi:
+          is_main: true
+          internal_port: 8787
+    
+x-runtipi:
+    schema_version: 2
