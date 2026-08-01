@@ -29,7 +29,7 @@ services:
     image: ghcr.io/connorgallopo/tracearr:1.5.0
     container_name: tracearr
     ports:
-      - "${PORT:-3000}:3000"
+      - "${PORT:-3010}:3010"
     environment:
       - NODE_ENV=production
       - PORT=3000

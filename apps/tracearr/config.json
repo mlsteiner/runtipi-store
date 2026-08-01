@@ -4,7 +4,7 @@
   "available": true,
   "short_desc": "Real-time monitoring for Plex, Jellyfin, and Emby. One dashboard for all your servers.",
   "author": "Connor Gallopo",
-  "port": 3000,
+  "port": 3010,
   "categories": [
     "media",
     "utilities"
