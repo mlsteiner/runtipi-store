@@ -1,0 +1,43 @@
+{
+  "name": "Tracearr",
+  "id": "tracearr",
+  "available": true,
+  "short_desc": "Real-time monitoring for Plex, Jellyfin, and Emby. One dashboard for all your servers.",
+  "author": "Connor Gallopo",
+  "port": 3000,
+  "categories": [
+    "media",
+    "utilities"
+  ],
+  "description": "Tracearr is a monitoring platform for Plex, Jellyfin, and Emby. Track streams in real-time, dig into playback analytics, and spot account sharing before it gets out of hand.",
+  "tipi_version": 1,
+  "version": "v1.5.0",
+  "source": "https://github.com/connorgallopo/tracearr",
+  "website": "https://www.tracearr.com/",
+  "exposable": true,
+  "supported_architectures": [
+    "arm64",
+    "amd64"
+  ],
+  "created_at": 1782874339000,
+  "updated_at": 1785514800000,
+  "dynamic_config": true,
+  "form_fields": [
+      {
+          "type": "password",
+          "label": "JWT Secret",
+          "max": 32,
+          "min": 32,
+          "required": true,
+          "env_variable": "JWT_SECRET"
+      },
+      {
+          "type": "password",
+          "label": "Cookie Secret",
+          "max": 32,
+          "min": 32,
+          "required": true,
+          "env_variable": "COOKIE_SECRET"
+      }
+  ]
+}
