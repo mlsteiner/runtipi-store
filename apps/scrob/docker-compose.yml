@@ -34,8 +34,8 @@ services:
 
       # ── Registrations ────────────────────────────────────────────────────────
       # Registrations are open by default. Disable after initial setup if desired.
-      # ENABLE_REGISTRATIONS: "false"
-      # REGISTRATION_MAX_ALLOWED_USERS: "0"  # 0 = unlimited
+      ENABLE_REGISTRATIONS: "true"
+      REGISTRATION_MAX_ALLOWED_USERS: "4"  # 0 = unlimited
 
       # ── OIDC (optional) ─────────────────────────────────────────────────────
       # OIDC_ENABLED: "false"
