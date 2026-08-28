@@ -1,7 +1,7 @@
 version: "3.8"
 services:
   sportarr:
-    image: sportarr/sportarr:v4.1.5.1115
+    image: ghcr.io/sportarr/sportarr:v4.1.5.1115
     container_name: sportarr
     environment:
       - PUID=99
