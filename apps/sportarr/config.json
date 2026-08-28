@@ -1,0 +1,26 @@
+{
+  "name": "Sportarr",
+  "id": "sportarr",
+  "available": true,
+  "short_desc": "Sports PVR for Usenet and Torrents",
+  "author": "Sportarr",
+  "port": 1867,
+  "categories": [
+    "media",
+    "utilities"
+  ],
+  "description": "Like Sonarr & Radarr, but for sports events. Monitors sports leagues, searches your indexers for releases, and handles file renaming, organization, and media server integration.",
+  "tipi_version": 1,
+  "version": "v4.1.5.1115",
+  "source": "https://github.com/Sportarr/Sportarr",
+  "website": "https://sportarr.net",
+  "exposable": true,
+  "supported_architectures": [
+    "arm64",
+    "amd64"
+  ],
+  "created_at": 1787875704000,
+  "updated_at": 1787875704000,
+  "dynamic_config": true,
+  "form_fields": []
+}

@@ -1,0 +1,23 @@
+version: "3.8"
+services:
+  sportarr:
+    image: sportarr/sportarr:v4.1.5.1115
+    container_name: sportarr
+    environment:
+      - PUID=99
+      - PGID=100
+      - UMASK=022
+      - TZ=${TZ}  # Optional: set your timezone
+    volumes:
+      - ${APP_DATA_DIR}/config:/config
+      - /mnt/BX500/media:/data
+    ports:
+      - 1867:1867
+    restart: unless-stopped
+
+x-runtipi:
+  is_main: true
+  internal_port: 1867
+    
+x-runtipi:
+    schema_version: 2
