@@ -3,7 +3,7 @@
   <a href="https://discord.gg/YjHVWGWjjG"><img src="https://img.shields.io/discord/1427430309653123105?style=flat&logo=discord&logoColor=white&label=discord&color=7289da" alt="Discord online"></a>
 </p>
 
-<img src="./Logo/512.png" width="200" alt="Sportarr">
+<img src="https://github.com/Sportarr/Sportarr/raw/main/Logo/512.png" width="200" alt="Sportarr">
 
 <h3>Sports PVR for Usenet and Torrents</h3>
 
@@ -30,7 +30,7 @@
 
 ---
 
-![Sportarr Dashboard](docs/images/dashboard.png)
+![Sportarr Dashboard](https://github.com/Sportarr/Sportarr/raw/main/docs/images/dashboard.png)
 
 ## What It Does
 

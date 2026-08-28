@@ -3,8 +3,8 @@ services:
     image: sportarr/sportarr:latest
     container_name: sportarr
     environment:
-      - PUID=99
-      - PGID=100
+      - PUID=1000
+      - PGID=1000
       - UMASK=022
       - TZ=${TZ}  # Optional: set your timezone
     volumes:
