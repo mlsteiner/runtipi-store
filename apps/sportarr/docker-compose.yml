@@ -13,8 +13,9 @@ services:
     ports:
       - 1867:1867
     restart: unless-stopped
+    x-runtipi:
+          is_main: true
+          internal_port: 1867
     
 x-runtipi:
     schema_version: 2
-    is_main: true
-    internal_port: 1867
