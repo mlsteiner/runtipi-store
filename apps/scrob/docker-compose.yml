@@ -17,7 +17,7 @@ services:
 
   scrob:
     container_name: scrob
-    image: ghcr.io/ellite/scrob:2.27.0
+    image: ghcr.io/ellite/scrob:2.34.2
     restart: unless-stopped
     depends_on:
       scrob-db:
